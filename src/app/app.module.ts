@@ -9,20 +9,23 @@ import { SharedComponent } from './shared/shared.component';
 import { StocksComponent } from './stocks.component';
 import { StockDirectiveDirective } from './stock-directive.directive';
 import { HighlightDirective} from './shared/highlight.directive';
+import { StockService} from './stock.service';
+import { DateFormetterPipe } from './date-formetter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent, StocksComponent, HighlightDirective,
     MutualfundsComponent,
     SharedComponent,
-    StockDirectiveDirective
+    StockDirectiveDirective,
+    DateFormetterPipe
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [StockService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
