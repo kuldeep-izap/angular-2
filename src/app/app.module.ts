@@ -12,6 +12,9 @@ import { HighlightDirective} from './shared/highlight.directive';
 import { StockService} from './stock.service';
 import { DateFormetterPipe } from './date-formetter.pipe';
 import { routing} from './app.routing';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {CurrencyService} from './currency.service';
+import { BondsDirective } from './bonds.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { routing} from './app.routing';
     MutualfundsComponent,
     SharedComponent,
     StockDirectiveDirective,
-    DateFormetterPipe
+    DateFormetterPipe,
+    DashboardComponent,
+    BondsDirective
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,7 @@ import { routing} from './app.routing';
     HttpModule,
     routing
   ],
-  providers: [StockService],
+  providers: [StockService, CurrencyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
